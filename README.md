@@ -8,5 +8,19 @@
 Основые библиотеки:
   - requests
   - selenium
+  - 
+###Использование
+
+```
+nickname = "test"
+tokens = network_tokens_hooker.get_session_data()
+donate_getter = donate_detector.HolyworldRequester(*tokens)
+donate_getter.get_user_info(nickname)
+```
+
+Готовое решение для использования - main.py
+
+###Установка
+
 
 Запрещается использование в вредоносных целях
