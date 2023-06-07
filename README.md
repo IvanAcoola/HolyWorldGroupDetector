@@ -40,4 +40,6 @@ pip install -r requirements.txt
 python3 main.py
 ```
 
+
+
 ***Запрещается использование в вредоносных целях***
