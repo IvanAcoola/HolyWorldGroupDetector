@@ -7,12 +7,12 @@ from prices import temp_prices, lt_prices, donates
 class HolyworldRequester:
     def __init__(self, csrf, xsrf, session):
         self.csrf = csrf
-        self.xstf = xsrf
+        self.xsrf = xsrf
         self.session = session
 
     def request(self, nickname, donate, time_stage=None):
         cookies = {'holyworld_session': self.session}
-        headers = {'x-csrf-token': self.csrf, 'x-xsrf-token': self.xstf}
+        headers = {'x-csrf-token': self.csrf, 'x-xsrf-token': self.xsrf}
         json_data = {'player': nickname, 'section': 1, 'currency': 'RUB', 'goodid': donate, 'server': 'anarchy'}
         if time_stage:
             json_data.update({'position': time_stage})  # 1 - 1 month, 2 - 3 month, 3 - lt
